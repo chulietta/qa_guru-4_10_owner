@@ -1,6 +1,5 @@
 package tests;
 
-import config.ConfigHelper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
@@ -20,7 +19,7 @@ public class TestBase {
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
-        if (ConfigHelper.getVideoStorage() != null)
+        if (System.getProperty("location").equals("remote"))
             attachVideo();
         closeWebDriver();
     }

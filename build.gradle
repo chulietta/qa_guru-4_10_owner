@@ -43,5 +43,4 @@ tasks.withType(Test) {
 
 test {
     useJUnitPlatform()
-    systemProperties(System.getProperties())
 }
