@@ -17,7 +17,8 @@ public class DriverHelper {
 
         if (System.getProperty("location").equals("remote")) {
             Configuration.browserVersion = ConfigHelper.getBrowserVersion();
-            Configuration.remote = ConfigHelper.getRemoteUrl();
+            //Configuration.remote = ConfigHelper.getRemoteUrl();
+            Configuration.headless = true;
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
