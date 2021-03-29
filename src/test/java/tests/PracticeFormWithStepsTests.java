@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class PracticeFormWithStepsTests extends TestBase{
 
     @Test
+    @Tag("web")
     @DisplayName("Fill Form")
     void positiveFormTest() {
         String firstName = "Yuliya",

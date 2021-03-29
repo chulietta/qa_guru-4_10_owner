@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormWithFakerTests extends TestBase{
 
     @Test
+    @Tag("web")
     @DisplayName("Fill Form With Faker")
     void positiveFormTest() {
         Faker faker = new Faker();
