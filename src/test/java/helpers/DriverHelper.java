@@ -13,7 +13,7 @@ public class DriverHelper {
         addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
         Configuration.baseUrl = ConfigHelper.getBaseUrl();
         Configuration.browser = ConfigHelper.getBrowserName();
-        Configuration.startMaximized = true;
+        //Configuration.startMaximized = true;
         Configuration.timeout = 10000;
 
         if (System.getProperty("location").equals("remote")) {
