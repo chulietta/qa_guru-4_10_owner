@@ -16,12 +16,15 @@ public class DriverHelper {
         Configuration.startMaximized = true;
 
         if (System.getProperty("location").equals("remote")) {
-            Configuration.browserVersion = ConfigHelper.getBrowserVersion();
+
+            Configuration.browserSize = "1024x768";
+            Configuration.headless = true;
+            /*Configuration.browserVersion = ConfigHelper.getBrowserVersion();
             Configuration.remote = ConfigHelper.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.browserCapabilities = capabilities;
+            Configuration.browserCapabilities = capabilities;*/
         }
     }
 }
