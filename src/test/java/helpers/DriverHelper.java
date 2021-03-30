@@ -14,6 +14,7 @@ public class DriverHelper {
         Configuration.baseUrl = ConfigHelper.getBaseUrl();
         Configuration.browser = ConfigHelper.getBrowserName();
         Configuration.startMaximized = true;
+        Configuration.timeout = 10000;
 
         if (System.getProperty("location").equals("remote")) {
 
