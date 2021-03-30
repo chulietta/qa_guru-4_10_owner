@@ -13,19 +13,16 @@ public class DriverHelper {
         addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
         Configuration.baseUrl = ConfigHelper.getBaseUrl();
         Configuration.browser = ConfigHelper.getBrowserName();
-        //Configuration.startMaximized = true;
+        Configuration.startMaximized = true;
         Configuration.timeout = 10000;
 
         if (System.getProperty("location").equals("remote")) {
-
-            Configuration.browserSize = "1024x768";
-            Configuration.headless = true;
-            /*Configuration.browserVersion = ConfigHelper.getBrowserVersion();
+            Configuration.browserVersion = ConfigHelper.getBrowserVersion();
             Configuration.remote = ConfigHelper.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.browserCapabilities = capabilities;*/
+            Configuration.browserCapabilities = capabilities;
         }
     }
 }
